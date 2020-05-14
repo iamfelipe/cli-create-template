@@ -1,15 +1,15 @@
-# `@iamfelipe/create-template`
+# `@felipecastillo/create-template`
 
 🏗 CLI to bootstrap new templates
 
 ## Installation & Usage
 
 ```bash
-npm init @iamfelipe/template
+npm init @felipecastillo/template
 # or
-npx @iamfelipe/create-template
+npx @felipecastillo/create-template
 # or
-npm install -g @iamfelipe/create-template
+npm install -g @felipecastillo/create-template
 create-template
 ```
 
@@ -19,4 +19,4 @@ MIT
 
 ## Collaborators
 
-- Felipe Castillo <castillo.devsigner@icloud.com
+- Felipe Castillo <castillo.devsigner@icloud.com>
