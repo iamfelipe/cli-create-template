@@ -1,0 +1,43 @@
+{
+  "name": "@felipecastillo/create-template",
+  "version": "1.1.1",
+  "description": "A CLI to bootstrap new projects",
+  "main": "index.js",
+  "bin": {
+    "@felipecastillo/create-template": "bin/create-template",
+    "create-template": "bin/create-template"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cli",
+    "create-template"
+  ],
+  "author": "Felipe Castillo <castillo.devsigner@icloud.com>",
+  "license": "ISC",
+  "dependencies": {
+    "arg": "^4.1.0",
+    "chalk": "^2.4.2",
+    "covgen": "^3.1.0",
+    "esm": "^3.2.18",
+    "execa": "^1.0.0",
+    "gitignore": "^0.6.0",
+    "inquirer": "^6.2.2",
+    "listr": "^0.14.3",
+    "ncp": "^2.0.0",
+    "pkg-install": "^0.2.0",
+    "spdx-license-list": "^5.0.0"
+  },
+  "files": [
+    "bin/",
+    "src/",
+    "templates/"
+  ],
+  "devDependencies": {
+    "spdx-license-list": "^6.2.0"
+  }
+}
