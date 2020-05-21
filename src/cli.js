@@ -1,11 +1,11 @@
 import arg from 'arg';
-import fs from 'fs';
-import path from 'path';
+// import fs from 'fs';
+// import path from 'path';
 import yargs from 'yargs';
 import inquirer from 'inquirer'
 import { createProject } from './main';
 
-const CHOICES = fs.readdirSync(path.join(__dirname, '../templates'));
+// const CHOICES = fs.readdirSync(path.join(__dirname, '../templates'));
 
 function parseArgumentsIntoOptions(rawArgs) {
   const args = arg(
@@ -30,7 +30,7 @@ function parseArgumentsIntoOptions(rawArgs) {
 }
 
 async function promptForMissingOptions(options) {
-  const defaultTemplate = 'static';
+  const defaultTemplate = 'static-boilerplate';
   if (options.skipPrompts) {
     return {
       ...options,
@@ -43,7 +43,7 @@ async function promptForMissingOptions(options) {
       type: 'list',
       name: 'template',
       message: 'Please choose which project template to use',
-      choices: CHOICES,
+      choices: ['static-boilerplate'],
       default: defaultTemplate,
       when: () => !yargs.argv['template']
     },
