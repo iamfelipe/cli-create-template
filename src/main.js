@@ -71,6 +71,7 @@ export async function createProject(options) {
     process.exit(1);
   }
 
+  // Create the project directory
   const tasks = new Listr(
     [
       {
