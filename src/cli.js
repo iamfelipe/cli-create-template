@@ -2,12 +2,13 @@ import arg from 'arg';
 // import fs from 'fs';
 // import path from 'path';
 import yargs from 'yargs';
-import inquirer from 'inquirer'
+import inquirer from 'inquirer';
 import { createProject } from './main';
 
 // const CHOICES = fs.readdirSync(path.join(__dirname, '../templates'));
 
 function parseArgumentsIntoOptions(rawArgs) {
+  // Define the command line arguments
   const args = arg(
     {
       '--git': Boolean,
@@ -45,17 +46,18 @@ async function promptForMissingOptions(options) {
       message: 'Please choose which project template to use',
       choices: ['static-boilerplate'],
       default: defaultTemplate,
-      when: () => !yargs.argv['template']
+      when: () => !yargs.argv['template'],
     },
     {
       type: 'confirm',
       name: 'git',
       message: 'Initialize a git repository?',
       default: false,
-      when: () => !yargs.argv['git']
-    }
+      when: () => !yargs.argv['git'],
+    },
   ];
 
+  // Prompt the user for options
   const answers = await inquirer.prompt(questions);
   return {
     ...options,
